@@ -24,7 +24,7 @@ else
 
     int count = 0;
     int[] arrayRandom = new int[90];
-    for (int i = 0; i < arrayRandom.Length; i++)
+    for (int i = 0; i < arrayRandom.Length -1; i++)
     {
         arrayRandom[i] = 10 + i;
     }
