@@ -2,19 +2,20 @@
 // Напишите программу, которая будет построчно выводить массив, 
 // добавляя индексы каждого элемента.
 Console.WriteLine();
-Console.WriteLine("Внимание! Сумма строк, столбцов и величины по оси z должна быть меньше или равна 13!");
+Console.WriteLine("Внимание! Произведение x*y*z должно быть меньше или равно 90");
+Console.WriteLine("Иначе уникальных двузначных чисел не хватит для заполнения массива");
 Console.WriteLine();
-Console.WriteLine("Введите количество строк: ");
+Console.WriteLine("Введите количество строк (x): ");
 int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов: ");
+Console.WriteLine("Введите количество столбцов (y): ");
 int columns = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите размерность массива по оси z: ");
+Console.WriteLine("Введите размерность массива по оси z (z): ");
 int zElements = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
-if (rows + columns + zElements > 13)        // Проверка условия достаточности двузначных чисел
+if (rows * columns * zElements > 90)        // Проверка условия достаточности двузначных чисел
 {
-    Console.WriteLine("НЕДОСТАТОЧНО УНИКАЛЬНЫХ ДВУЗНАЧНЫХ ЭЛЕМЕНТОВ ДЛЯ ОТОБРАЖЕНИЯ МАССИВА");
+    Console.WriteLine("НЕДОСТАТОЧНО УНИКАЛЬНЫХ ДВУЗНАЧНЫХ ЧИСЕЛ ДЛЯ ЗАПОЛНЕНИЯ МАССИВА");
 }
 else
 {
@@ -22,7 +23,7 @@ else
     // и затем тасуем элементы внутри него
 
     int count = 0;
-    int[] arrayRandom = new int[89];
+    int[] arrayRandom = new int[90];
     for (int i = 0; i < arrayRandom.Length; i++)
     {
         arrayRandom[i] = 10 + i;
@@ -54,4 +55,4 @@ else
         }
     }
 }
-// Кто сказал, что наши домашки недостаточно сложные???
+
